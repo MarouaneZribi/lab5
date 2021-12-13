@@ -8,6 +8,7 @@ const pg = require('pg');
     pg.defaults.ssl = {rejectUnauthorized: false} 
   }
 /* Set the client as pg. Set migrations and seeds directories. The sharedConfig variable is shared between our development and production environments. */ 
+
 const sharedConfig = { 
   client: 'pg',
    migrations: {directory: './data/migrations'},
