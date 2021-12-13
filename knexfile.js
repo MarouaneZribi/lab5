@@ -11,7 +11,7 @@ const pg = require('pg');
 const sharedConfig = { 
   client: 'pg',
    migrations: {directory: './data/migrations'},
-    seeds: {directory: './data/seeds'},
+  seeds: {directory: './data/seeds'},
    }
  /* sets the connection configuration settings for the development and production environment. */
   module.exports = { 
@@ -26,7 +26,7 @@ const sharedConfig = {
          }, 
          production: {
             ...sharedConfig,
-             connection: process.env.DATABASE_URL,
+             connection:process.env.DATABASE_URL,
               pool: { min: 2, max: 10 },
              }, 
             };
