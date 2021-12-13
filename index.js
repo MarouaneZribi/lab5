@@ -15,3 +15,7 @@ server.get('/', (req, res) => {
 })
 /* Listen to the port in the variable and display a message */ 
 server.listen(port, () => { console.log(`\n=== Server listening on port ${port} ===\n`) })
+/* import routes from route.js */
+const testRouter = require('./route') 
+/* tell the server to use that router and allows us to use it using ‘/test’ route */ 
+server.use('/test', testRouter)
